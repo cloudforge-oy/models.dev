@@ -1,0 +1,26 @@
+schema = 2
+name = "kimi-k3.1-pro"
+description = "Kimi K3.1 Pro is the first model in the K3.1 series and Kimi's most capable flagship to date, a 3T class model with native visual understanding and a 1M token context window. It brings substantial gains in coding, 3D creation, financial research and modeling, and suits software engineering, knowledge work and deep reasoning."
+family = "kimi-k3"
+open_weights = false
+release_date = "2026-10-23"
+
+[modalities]
+input = ["text", "image"]
+output = ["text"]
+
+[capabilities]
+tools = { supported = true }
+reasoning = { supported = true, effort = ["none", "low", "medium", "high", "max"] }
+structured_output = true
+
+[limit]
+context = 1_048_576
+output = 1_048_576
+
+[cost.text.input]
+price = 2
+cache = { read = 0.2, write = 2 }
+
+[cost.text.output]
+price = 10
